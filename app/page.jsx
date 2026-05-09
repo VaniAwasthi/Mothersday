@@ -81,7 +81,8 @@ const mummaCaptions = [
   },
 ];
 
-const letter = `Thank you for every hug, every prayer, every sleepless night, and every sacrifice you made for me. You are the reason behind my strength, my smile, and my dreams. No words will ever truly express how much I love you. Today and forever, you will always be my hero. ❤️`;
+const letter = `You are my greatest strength and my whole world. Home never feels complete when you are not around. You are the strongest woman I have ever known and the reason I believe in unconditional love. Your support has always been silent but powerful, guiding me through every phase of life. As you grow older, a part of my heart constantly fears losing you because life without you feels unimaginable. If I ever get another life, I would choose you again and again to be my mother. ❤️
+`;
 
 const thankyouMessage = `No matter how much I say it, words will never be enough to express what you mean to me. You are the heart of my life, my biggest blessing, and the purest love I have ever known. Thank you for loving me in ways I may never fully understand. Today, tomorrow, and in every lifetime — I will always love you endlessly. ❤️`;
 
