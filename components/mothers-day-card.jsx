@@ -49,6 +49,7 @@ export default function MothersDayCard({
   letter,
   captions = defaultCaptions,
   thankyouMessage = "You are loved more than words can say.\nToday, tomorrow, and always. ❤️",
+  signature = "",
 }) {
   const memories = memoryImages.map((src, i) => ({
     src,
@@ -96,6 +97,7 @@ export default function MothersDayCard({
     memories,
     letter,
     thankyouMessage,
+    signature,
     videoSrc,
     selectedMemory,
     setSelectedMemory,
@@ -203,6 +205,7 @@ function renderPage(name, ctx) {
         <ThankYouPage
           personName={ctx.personName}
           thankyouMessage={ctx.thankyouMessage}
+          signature={ctx.signature}
           onRestart={ctx.restart}
         />
       );
@@ -368,7 +371,7 @@ function MemoriesPage({
               type="button"
               onClick={() => onSelectMemory(isSelected ? null : m)}
               className={cn(
-                "group relative aspect-square overflow-hidden rounded-xl border border-pink-200 shadow-md transition-all duration-300 hover:scale-105 hover:shadow-lg",
+                "group relative aspect-square overflow-hidden rounded-xl border border-pink-200 bg-pink-50 shadow-md transition-all duration-300 hover:scale-105 hover:shadow-lg",
                 isSelected &&
                   "ring-4 ring-pink-400 ring-offset-2 ring-offset-white"
               )}
@@ -378,7 +381,7 @@ function MemoriesPage({
                 alt={m.title}
                 fill
                 sizes="(max-width: 640px) 30vw, 150px"
-                className="object-cover transition duration-500 group-hover:scale-110"
+                className="object-contain p-1 transition duration-500 group-hover:scale-105"
               />
             </button>
           );
@@ -404,13 +407,13 @@ function MemoriesPage({
 function MemoryDetail({ memory, onClose }) {
   return (
     <div className="overflow-hidden rounded-2xl border border-pink-200 bg-white shadow-lg">
-      <div className="relative aspect-[4/3]">
+      <div className="relative mx-auto flex aspect-[4/3] w-full max-w-md items-center justify-center bg-gradient-to-br from-pink-50 to-rose-50">
         <Image
           src={withBasePath(memory.src)}
           alt={memory.title}
           fill
           sizes="(max-width: 768px) 100vw, 600px"
-          className="object-cover"
+          className="object-contain p-2"
         />
         <button
           type="button"
@@ -457,9 +460,9 @@ function VideoPage({ src, personName, onEnded }) {
   );
 }
 
-function ThankYouPage({ personName, onRestart, thankyouMessage }) {
+function ThankYouPage({ personName, onRestart, thankyouMessage, signature }) {
   return (
-    <PageShell accent>  
+    <PageShell accent>
       <div className="py-6 text-center">
         <div className="animate-float text-6xl md:text-7xl">💖</div>
         <h2 className="mt-4 text-3xl font-extrabold text-pink-600 md:text-4xl">
@@ -468,7 +471,11 @@ function ThankYouPage({ personName, onRestart, thankyouMessage }) {
         <p className="mt-4 text-base leading-relaxed whitespace-pre-line text-gray-700 md:text-lg">
           {thankyouMessage}
         </p>
-        <p className="mt-6 text-sm text-pink-500">— With all my love</p>
+        {signature && (
+          <p className="mt-8 text-base font-medium tracking-wide text-pink-500 italic md:text-lg">
+            — {signature}
+          </p>
+        )}
 
         <div className="mt-10 flex justify-center">
           <button

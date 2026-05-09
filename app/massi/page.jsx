@@ -70,6 +70,7 @@ export default function Page() {
       letter={letter}
       captions={massiCaptions}
       thankyouMessage="Life feels softer, happier, and more beautiful with you around. I’m truly lucky to have a Massi like you in my life. ❤️"
+      signature="Your Jannu mannu."
     />
   );
 }

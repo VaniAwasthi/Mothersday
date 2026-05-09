@@ -96,6 +96,7 @@ export default function Page() {
       letter={letter}
       captions={mummaCaptions}
       thankyouMessage={thankyouMessage}
+      signature="Your Guni Bitiya"
     />
   );
 }
