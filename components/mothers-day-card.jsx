@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
+import { withBasePath } from "@/lib/base-path";
 
 const balloonPositions = [
   "5%",
@@ -318,7 +319,7 @@ function CollagePage({ personName, images, onNext }) {
             className="relative aspect-square overflow-hidden rounded-2xl border border-pink-200 shadow-md"
           >
             <Image
-              src={src}
+              src={withBasePath(src)}
               alt={`A photo of ${personName}`}
               fill
               sizes="(max-width: 640px) 30vw, 200px"
@@ -373,7 +374,7 @@ function MemoriesPage({
               )}
             >
               <Image
-                src={m.src}
+                src={withBasePath(m.src)}
                 alt={m.title}
                 fill
                 sizes="(max-width: 640px) 30vw, 150px"
@@ -405,7 +406,7 @@ function MemoryDetail({ memory, onClose }) {
     <div className="overflow-hidden rounded-2xl border border-pink-200 bg-white shadow-lg">
       <div className="relative aspect-[4/3]">
         <Image
-          src={memory.src}
+          src={withBasePath(memory.src)}
           alt={memory.title}
           fill
           sizes="(max-width: 768px) 100vw, 600px"
