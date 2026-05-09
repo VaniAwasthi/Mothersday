@@ -1,4 +1,5 @@
 import MothersDayCard from "@/components/mothers-day-card";
+import { withBasePath } from "@/lib/base-path";
 
 export const metadata = {
   title: "Happy Mother’s Day, Mumma 💖",
@@ -90,7 +91,7 @@ export default function Page() {
       personName="Mumma"
       collageImages={collageImages}
       memoryImages={memoryImages}
-      videoSrc="/videos/mumma.mp4"
+      videoSrc={withBasePath("/videos/mumma.mp4")}
       letter={letter}
       captions={mummaCaptions}
       thankyouMessage={thankyouMessage}
