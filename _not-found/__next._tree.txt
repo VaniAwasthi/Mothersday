@@ -1,2 +1,2 @@
-:HL["/Mothersday/_next/static/chunks/0mdt6hr1llppf.css","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":20,"slots":{"children":{"name":"/_not-found","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"uhLnryEwi78kXJGc5vvYG"}
+:HL["/Mothersday/_next/static/chunks/0_y3as4_d60y2.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":20,"slots":{"children":{"name":"/_not-found","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"rqkiPe9OJB-XBspc2D0x7"}
